@@ -3,7 +3,7 @@ import DisplayData from './components/DisplayData'
 import { useDarkMode } from './components/DarkMode'
 import './App.css';
 
-let background = ""
+
 function App() {
 
   const [brightness, setBrightness] = useDarkMode("white")
@@ -16,7 +16,7 @@ function App() {
     else {
       setBrightness("white")
     }
-    background = brightness
+    
   }
   return (
     
