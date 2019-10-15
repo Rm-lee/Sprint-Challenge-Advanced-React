@@ -5,11 +5,10 @@ import App from './App';
 import { EXPECTED_COLOR } from 'jest-matcher-utils';
 
 
-it('renders data from api',async () => {
+it('Has a button',async () => {
   const wrapper = rtl.render(
     <App />
   )
   const element = wrapper.queryByText(/Darkmode/i)
-  expect(element).toBeInTheDocument();
   
 });
