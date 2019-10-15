@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Person from './Person'
 import axios from 'axios'
+
 class DisplayData extends Component {
  constructor(props) {
   super();
