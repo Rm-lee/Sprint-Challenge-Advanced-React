@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import DisplayData from './components/DisplayData'
+import { useDarkMode } from './components/DarkMode'
 import './App.css';
 
+
 function App() {
+
+  const [brightness, setBrightness] = useDarkMode("white")
+  
+
+  const darkSwitch = () => {
+    if (brightness === "white") {
+      setBrightness("black")
+    }
+    else {
+      setBrightness("white")
+    }
+    
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    
+    <div className={`App ${brightness}`}>
+    <button onClick={darkSwitch}>Darkmode</button>
+    < DisplayData />
+    
     </div>
+    
   );
+ 
 }
 
+
 export default App;
+
+ 
